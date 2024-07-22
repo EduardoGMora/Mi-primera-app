@@ -1,0 +1,16 @@
+# Laravel
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# OS or Editor folders
+.idea
+.vscode
+.DS_Store
+Thumbs.db
