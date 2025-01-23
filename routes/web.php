@@ -21,10 +21,20 @@ use App\Http\Controllers\FollowController;
 // Example route
 Route::get('/test', [ExampleController::class, 'test']);
 
+// Search route
+Route::get('/search/{query}', function($query) {
+    $posts = \App\Models\Post::search($query)->get(); // Search in the posts table
+    $users = \App\Models\User::search($query)->get(); // Search in the users table
+
+    return response()->json([
+        'posts' => $posts,
+        'users' => $users,
+    ]);
+})->name('search');
 
 //Admin related routes
 Route::get('/admins-only', function () {
-    return 'Esta es la página de admins';
+    return 'Esta es la página de admins (próximamente)';
 })->middleware('can:visitAdminPages');
 
 //User related routes

@@ -10,6 +10,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "algoliasearch": "^5.5.2",
         "dompurify": "^3.1.6"
     }
 }
